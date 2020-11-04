@@ -2,7 +2,7 @@
 #include <fstream>
 #include "Image2D.hpp"
 #include "Color.hpp"
-#include "Image2DWritter.hpp"
+#include "Image2DWriter.hpp"
 #include "Image2DReader.hpp"
 
 int main(int argc, char const *argv[])

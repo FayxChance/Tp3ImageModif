@@ -40,6 +40,39 @@ public:
   /// @return une référence à la valeur du pixel(i,j)
   Value &at(int i, int j) { return m_data[index(i, j)]; }
 
+  template <typename TAccessor>
+  struct GenericConstIterator : public Container::const_iterator
+  {
+    typedef TAccessor Accessor;
+    typedef typename Accessor::Argument ImageValue; // Color ou unsigned char
+    typedef typename Accessor::Value Value;         // unsigned char (pour ColorGreenAccessor)
+    typedef typename Accessor::Reference Reference; // ColorGreenReference (pour ColorGreenAccessor)
+
+    GenericConstIterator(const Image2D<ImageValue> &image, int x, int y) : Container::const_iterator(image.m_data.cbegin() + image.index(x, y)) {}
+
+    // Accès en lecture (rvalue)
+    Value
+    operator*() const
+    {
+      return Accessor::access(Container::const_iterator::operator*());
+    }
+  };
+
+  template <typename Accessor>
+  GenericConstIterator<Accessor> start(int x = 0, int y = 0) const
+  {
+    return GenericConstIterator<Accessor>(*this, x, y);
+  }
+  template <typename Accessor>
+  GenericConstIterator<Accessor> begin() const
+  {
+    return GenericConstIterator<Accessor>(*this, 0, 0);
+  }
+  template <typename Accessor>
+  GenericConstIterator<Accessor> end() const
+  {
+    return GenericConstIterator<Accessor>(*this, 0, h());
+  }
   /// Un itérateur (non-constant) simple sur l'image.
   struct Iterator : public Container::iterator
   {
