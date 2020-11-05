@@ -40,6 +40,7 @@ public:
   /// @return une référence à la valeur du pixel(i,j)
   Value &at(int i, int j) { return m_data[index(i, j)]; }
 
+  /////////////////////////////////////////////////// GENERIQUE CONST
   template <typename TAccessor>
   struct GenericConstIterator : public Container::const_iterator
   {
@@ -57,22 +58,60 @@ public:
       return Accessor::access(Container::const_iterator::operator*());
     }
   };
-
   template <typename Accessor>
   GenericConstIterator<Accessor> start(int x = 0, int y = 0) const
   {
     return GenericConstIterator<Accessor>(*this, x, y);
   }
   template <typename Accessor>
-  GenericConstIterator<Accessor> begin() const
+  GenericConstIterator<Accessor> cbegin() const
   {
     return GenericConstIterator<Accessor>(*this, 0, 0);
   }
   template <typename Accessor>
-  GenericConstIterator<Accessor> end() const
+  GenericConstIterator<Accessor> cend() const
   {
     return GenericConstIterator<Accessor>(*this, 0, h());
   }
+
+  ///////////////////////////////////// GENERIQUE NON CONST
+  template <typename TAccessor>
+  struct GenericIterator : public Container::iterator
+  {
+    typedef TAccessor Accessor;
+    typedef typename Accessor::Argument ImageValue; // Color ou unsigned char
+    typedef typename Accessor::Value Value;         // unsigned char (pour ColorGreenAccessor)
+    typedef typename Accessor::Reference Reference; // ColorGreenReference (pour ColorGreenAccessor)
+
+    GenericIterator(Image2D<ImageValue> &image, int x, int y) : Container::iterator(image.m_data.begin() + image.index(x, y)) {}
+
+    Reference operator*()
+    {
+      return Accessor::access(Container::iterator::operator*());
+    }
+    Value
+    operator*() const
+    {
+      return Accessor::access(Container::const_iterator::operator*());
+    }
+  };
+
+  template <typename Accessor>
+  GenericIterator<Accessor> start(int x = 0, int y = 0)
+  {
+    return GenericIterator<Accessor>(*this, x, y);
+  }
+  template <typename Accessor>
+  GenericIterator<Accessor> begin()
+  {
+    return GenericIterator<Accessor>(*this, 0, 0);
+  }
+  template <typename Accessor>
+  GenericIterator<Accessor> end()
+  {
+    return GenericIterator<Accessor>(*this, 0, h());
+  }
+
   /// Un itérateur (non-constant) simple sur l'image.
   struct Iterator : public Container::iterator
   {

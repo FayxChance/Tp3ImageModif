@@ -14,7 +14,7 @@ int main(int argc, char **argv)
     typedef ColorImage2D::Iterator ColorIterator;
     if (argc < 2)
     {
-        std::cerr << "Usage: save-green-channel <input.ppm>" << std::endl;
+        std::cerr << "Usage: save-all-channel <input.ppm>" << std::endl;
         return 0;
     }
     ColorImage2D img;
@@ -41,9 +41,8 @@ int main(int argc, char **argv)
     GrayLevelImage2D imgGreen(img.w(), img.h());
     GrayLevelImage2D imgBlue(img.w(), img.h());
     GrayLevelImage2D imgRed(img.w(), img.h());
-
     typedef ColorImage2D::GenericConstIterator<ColorGreenAccessor> ColorGreenConstIterator;
-    ColorGreenConstIterator itGreen = img.begin<ColorGreenAccessor>();
+    ColorGreenConstIterator itGreen = img.cbegin<ColorGreenAccessor>();
     for (GrayLevelIterator it = imgGreen.begin(), itE = imgGreen.end();
          it != itE; ++it)
     {
@@ -62,7 +61,7 @@ int main(int argc, char **argv)
 
     std::ofstream outputBlue(nameBlue); // récupère le 2eme argument.
     typedef ColorImage2D::GenericConstIterator<ColorBlueAccessor> ColorBlueConstIterator;
-    ColorBlueConstIterator itBlue = img.begin<ColorBlueAccessor>();
+    ColorBlueConstIterator itBlue = img.cbegin<ColorBlueAccessor>();
     for (GrayLevelIterator it = imgBlue.begin(), itE = imgBlue.end();
          it != itE; ++it)
     {
@@ -78,7 +77,7 @@ int main(int argc, char **argv)
     outputBlue.close();
 
     typedef ColorImage2D::GenericConstIterator<ColorRedAccessor> ColorRedConstIterator;
-    ColorRedConstIterator itRed = img.begin<ColorRedAccessor>();
+    ColorRedConstIterator itRed = img.cbegin<ColorRedAccessor>();
     for (GrayLevelIterator it = imgRed.begin(), itE = imgRed.end();
          it != itE; ++it)
     {

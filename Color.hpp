@@ -83,12 +83,96 @@ struct Color
         // Taking care of value
         v = max();
     }
-    /**
-     TODO: Convertit la couleur donnée avec le modèle HSV (TSV en
-     français) en une couleur RGB.
-  */
-    void setHSV(int h, float s, float v)
+
+    struct ColorValueAccessor
     {
+        typedef unsigned char Value;
+        typedef Color Argument;
+        struct ColorValueReference
+        {
+            Argument &arg;
+            ColorValueReference(Argument &someArg) : arg(someArg) {}
+
+            // Cette fonction sera appelée lors d'un `*it = ...`.
+            // S'occupe de changer la valeur de la couleur arg
+            // en fonction de la valeur donnée val.
+            // Il faut utiliser arg.getHSV et arg.setHSV.
+            ColorValueReference &operator=(Value val)
+            {
+                int h;
+                float s;
+                float v;
+                arg.getHSV(h, s, v);
+
+                return *this;
+            }
+
+            // S'occupe de retourner la valeur de la couleur arg (sans la changer).
+            // Un simple appel à arg.getHSV suffira.
+            operator Value() const
+            {
+                return arg.;
+            }
+        };
+
+        typedef ColorValueReference Reference;
+
+        // Il s'agit d'un simple accès en lecture à la valeur de la couleur arg.
+        // Un simple appel à arg.getHSV suffira.
+        static Value access(const Argument &arg)
+        {
+            ...
+        }
+
+        // Il suffit de créer et retourner un objet de type ColorValueReference référençant arg.
+        static Reference access(Argument &arg)
+        {
+            ...
+        }
+    };
+
+    void setHSV(int t, float s, float v)
+    {
+        auto ti = (t / 60) % 6;
+        auto f = t / 60 - ti;
+        auto l = v * (1 - s);
+        auto m = v * (1 - f * s);
+        auto n = v * (1 - (1 - f) * s);
+        switch (ti)
+        {
+        case 0:
+            red = (unsigned char)v;
+            green = (unsigned char)n;
+            blue = (unsigned char)l;
+            break;
+        case 1:
+            red = (unsigned char)m;
+            green = (unsigned char)v;
+            blue = (unsigned char)l;
+            break;
+        case 2:
+            red = (unsigned char)l;
+            green = (unsigned char)v;
+            blue = (unsigned char)n;
+            break;
+        case 3:
+            red = (unsigned char)l;
+            green = (unsigned char)m;
+            blue = (unsigned char)v;
+            break;
+        case 4:
+            red = (unsigned char)n;
+            green = (unsigned char)l;
+            blue = (unsigned char)v;
+            break;
+        case 5:
+            red = (unsigned char)v;
+            green = (unsigned char)l;
+            blue = (unsigned char)m;
+            break;
+        default:
+            break;
+        }
     }
 };
 
