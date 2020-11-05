@@ -103,7 +103,7 @@ struct Color
                 float s;
                 float v;
                 arg.getHSV(h, s, v);
-
+                arg.setHSV(h, s, val);
                 return *this;
             }
 
@@ -111,7 +111,11 @@ struct Color
             // Un simple appel à arg.getHSV suffira.
             operator Value() const
             {
-                return arg.;
+                int h;
+                float s;
+                float v;
+                arg.getHSV(h, s, v);
+                return h;
             }
         };
 
@@ -121,13 +125,17 @@ struct Color
         // Un simple appel à arg.getHSV suffira.
         static Value access(const Argument &arg)
         {
-            ...
+            int h;
+            float s, v;
+            arg.getHSV(h, s, v);
+            return h;
         }
 
         // Il suffit de créer et retourner un objet de type ColorValueReference référençant arg.
         static Reference access(Argument &arg)
         {
-            ...
+            ColorValueReference t = arg;
+            return t;
         }
     };
 
