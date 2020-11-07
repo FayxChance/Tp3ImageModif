@@ -12,6 +12,11 @@ int main(int argc, char **argv)
     typedef Image2D<Color> ColorImage2D;
     typedef Image2DReader<Color> ColorImage2DReader;
     typedef ColorImage2D::Iterator ColorIterator;
+
+    typedef ColorImage2D::GenericIterator<ColorRedAccessor> ColorRedIterator;
+    typedef ColorImage2D::GenericIterator<ColorGreenAccessor> ColorGreenIterator;
+    typedef ColorImage2D::GenericIterator<ColorBlueAccessor> ColorBlueIterator;
+
     if (argc < 3)
     {
         std::cerr << "Usage: cathodique <input.ppm> <output.ppm>" << std::endl;
@@ -27,13 +32,10 @@ int main(int argc, char **argv)
     }
     input.close();
 
-    typedef ColorImage2D::GenericIterator<ColorRedAccessor> ColorRedIterator;
-    typedef ColorImage2D::GenericIterator<ColorGreenAccessor> ColorGreenIterator;
-    typedef ColorImage2D::GenericIterator<ColorBlueAccessor> ColorBlueIterator;
     ColorRedIterator itRed = img.begin<ColorRedAccessor>();
     ColorGreenIterator itGreen = img.begin<ColorGreenAccessor>();
     ColorBlueIterator itBlue = img.begin<ColorBlueAccessor>();
-    // On écrit la composante verte dans l'image en niveaux de gris.
+
     int x = 0;
     for (ColorIterator it = img.begin(), itE = img.end();
          it != itE; ++it)

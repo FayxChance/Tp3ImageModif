@@ -37,6 +37,45 @@ public:
         if (!input.good())
             return false;
 
+        std::string str;
+        bool isAscii;
+        std::getline(input, str);
+        isAscii = str == "P1";
+
+        std::getline(input, str);
+        while ((str != "") && (str[0] == '#'))
+        {
+            std::getline(input, str);
+        }
+
+        // Taille
+        std::istringstream sizeImage(str);
+        int width, height;
+        sizeImage >> width >> height;
+        img = Image(width, height);
+        // Couleur max
+        std::getline(input, str);
+        if (isAscii)
+        {
+            input >> std::skipws;
+            for (auto it = img.begin(), itE = img.end(); it != itE; ++it)
+            {
+
+                unsigned char g;
+                input >> g;
+                *it = (int)g;
+            }
+        }
+        else
+        {
+            input >> std::noskipws;
+            for (auto it = img.begin(), itE = img.end(); it != itE; ++it)
+            {
+                unsigned char g;
+                input >> g;
+                *it = g;
+            }
+        }
         return true;
     }
 };

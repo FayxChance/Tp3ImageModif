@@ -1,6 +1,46 @@
 #ifndef _COLOR_HPP_
 #define _COLOR_HPP_
 
+struct Histogramme
+{
+    double h1[256];
+    double h2[256];
+    template <typename InputIterator>
+    void init(InputIterator it, InputIterator itE)
+    {
+        auto itDebutInit = it;
+        auto itFinInit = itE;
+        double somme = 0;
+        for (int i = 0; i < 256; i++)
+        {
+            h1[i] = 0;
+            h2[i] = 0;
+        }
+        while (it != itE)
+        {
+            int i = (int)*it;
+            // std::cout << " III : " << (int)i << std::endl;
+            // somme += 1;
+            h1[i] += 1;
+            ++it;
+        }
+        for (int i = 0; i < 256; i++)
+        {
+            h1[i] = (double)(h1[i] / (itFinInit - itDebutInit)) * 100;
+            somme += h1[i];
+            // std::cout << "------------------ SOMME TEMP ------- : " << h1[i] << std::endl;
+        }
+
+        // std::cout << "------------------ SOMME ------- : " << somme << std::endl;
+        h2[0] = h1[0];
+        for (int i = 1; i < 256; i++)
+        {
+            h2[i] = h1[i] + h2[i - 1];
+            // std::cout << "------------------ SOMME ------- : " << h2[i] << std::endl;
+        }
+    }
+};
+
 /**
    Représente une couleur avec un codage RGB. Ce codage utilise 3
    octets, le premier octet code l'intensité du rouge, le deuxième
@@ -102,8 +142,9 @@ struct Color
                 int h;
                 float s;
                 float v;
-                arg.getHSV(h, s, v);
-                arg.setHSV(h, s, val);
+                Argument *res = &arg;
+                res->getHSV(h, s, v);
+                res->setHSV(h, s, val);
                 return *this;
             }
 
