@@ -1,7 +1,7 @@
 LD=g++
 CXX=g++ -g -c 
 
-EXEC_SRC=testColorImage2D.cpp	save-all-channel.cpp	testGrayLevelImage2D.cpp	cathodique.cpp	histogrammeColor.cpp	histogrammeGrey.cpp	invert-blue-red.cpp egaliseur-couleur.cpp
+EXEC_SRC=testColorImage2D.cpp	save-all-channel.cpp	testGrayLevelImage2D.cpp	cathodique.cpp	histogrammeColor.cpp	histogrammeGrey.cpp	invert-blue-red.cpp egaliseur-couleur.cpp invert-color.cpp sepia.cpp
 
 MODULE_SRC=\
 
@@ -33,6 +33,11 @@ histogrammeGrey: histogrammeGrey.o ${MODULE_OBJ}
 invert-blue-red: invert-blue-red.o ${MODULE_OBJ}
 	${LD} ${MODULE_OBJ} $< -o $@
 
+invert-color: invert-color.o ${MODULE_OBJ}
+	${LD} ${MODULE_OBJ} $< -o $@
+
+sepia: sepia.o ${MODULE_OBJ}
+	${LD} ${MODULE_OBJ} $< -o $@
 egaliseur-couleur: egaliseur-couleur.o ${MODULE_OBJ}
 	${LD} ${MODULE_OBJ} $< -o $@
 
