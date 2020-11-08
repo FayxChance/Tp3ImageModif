@@ -1,6 +1,7 @@
 #ifndef _COLOR_HPP_
 #define _COLOR_HPP_
 
+#include <math.h>
 struct Histogramme
 {
     double h1[256];
@@ -10,6 +11,7 @@ struct Histogramme
     {
         auto itDebutInit = it;
         auto itFinInit = itE;
+        auto taille = itFinInit - itDebutInit;
         double somme = 0;
         for (int i = 0; i < 256; i++)
         {
@@ -18,17 +20,17 @@ struct Histogramme
         }
         while (it != itE)
         {
-            int i = (int)*it;
-            // std::cout << " III : " << (int)i << std::endl;
+            int i = *it;
+            // std::cout << " III : " << (double)i << std::endl;
             // somme += 1;
-            h1[i] += 1;
+            h1[(int)i] += 1.0;
             ++it;
         }
         for (int i = 0; i < 256; i++)
         {
-            h1[i] = (double)(h1[i] / (itFinInit - itDebutInit)) * 100;
+            h1[i] = h1[i] * 100 / taille;
             somme += h1[i];
-            // std::cout << "------------------ SOMME TEMP ------- : " << h1[i] << std::endl;
+            // std::cout << "------------------ SOMME TEMP ------- : i : " << i << "    " << (h1[i]) << std::endl;
         }
 
         // std::cout << "------------------ SOMME ------- : " << somme << std::endl;
@@ -38,6 +40,10 @@ struct Histogramme
             h2[i] = h1[i] + h2[i - 1];
             // std::cout << "------------------ SOMME ------- : " << h2[i] << std::endl;
         }
+    }
+    int egalisation(int i) const
+    {
+        return (int)(h2[i] / 100 * 255);
     }
 };
 
@@ -142,9 +148,12 @@ struct Color
                 int h;
                 float s;
                 float v;
-                Argument *res = &arg;
-                res->getHSV(h, s, v);
-                res->setHSV(h, s, val);
+                arg.getHSV(h, s, v);
+                // std::cout << " operator = Initial " << (float)v << std::endl;
+                arg.setHSV(h, s, (float)val);
+                // std::cout << " operator = val " << (float)val << std::endl;
+                // arg.getHSV(h, s, v);
+                // std::cout << " operator = v final " << (float)v << std::endl;
                 return *this;
             }
 
@@ -156,7 +165,10 @@ struct Color
                 float s;
                 float v;
                 arg.getHSV(h, s, v);
-                return h;
+                // std::cout << " value const " << (int)(v * 255) << std::endl;
+                // std::cout << " value const double " << (double)(v * 255) << std::endl;
+
+                return (unsigned char)(v * 255);
             }
         };
 
@@ -169,7 +181,9 @@ struct Color
             int h;
             float s, v;
             arg.getHSV(h, s, v);
-            return h;
+            // std::cout << " value access " << v << std::endl;
+
+            return (unsigned char)v * 255;
         }
 
         // Il suffit de créer et retourner un objet de type ColorValueReference référençant arg.
@@ -182,39 +196,85 @@ struct Color
 
     void setHSV(int t, float s, float v)
     {
-        auto ti = (t / 60) % 6;
-        auto f = t / 60 - ti;
-        auto l = v * (1 - s);
-        auto m = v * (1 - f * s);
-        auto n = v * (1 - (1 - f) * s);
+
+        // auto c = v * s;
+        // auto hp = h / 60;
+        // auto x = c * (1 - (abs(hp % 2 - 1)));
+        // Color color;
+        // if (0 <= hp <= 1)
+        // {
+        //     color = Color(c, x, 0);
+        // }
+        // else if (1 < hp <= 2)
+        // {
+        //     color = Color(x, c, 0);
+        // }
+        // else if (2 < hp <= 3)
+        // {
+        //     color = Color(0, c, x);
+        // }
+        // else if (3 < hp <= 4)
+        // {
+        //     color = Color(0, x, c);
+        // }
+        // else if (4 < hp <= 5)
+        // {
+        //     color = Color(x, 0, c);
+        // }
+        // else if (5 < hp <= 6)
+        // {
+        //     color = Color(c, 0, x);
+        // }
+        // auto m = v - c;
+        // red = (color.red + m);
+        // green = (color.green + m);
+        // blue = (color.blue + m);
+
+        int ti = (int)floor(t / 60) % 6;
+        float f = t / 60.0 - ti;
+        float l = v * (1.0 - s);
+        float m = v * (1.0 - f * s);
+        float n = v * (1.0 - (1.0 - f) * s);
         switch (ti)
         {
         case 0:
+            // std::cout << " case0 init: " << (int)red;
             red = (unsigned char)v;
+            // std::cout << "  case0 fini: " << (int)red << std::endl;
             green = (unsigned char)n;
             blue = (unsigned char)l;
             break;
         case 1:
+            // std::cout << " case1" << std::endl;
+
             red = (unsigned char)m;
             green = (unsigned char)v;
             blue = (unsigned char)l;
             break;
         case 2:
+            // std::cout << " case2" << std::endl;
+
             red = (unsigned char)l;
             green = (unsigned char)v;
             blue = (unsigned char)n;
             break;
         case 3:
+            // std::cout << " case3" << std::endl;
+
             red = (unsigned char)l;
             green = (unsigned char)m;
             blue = (unsigned char)v;
             break;
         case 4:
+            // std::cout << " case4" << std::endl;
+
             red = (unsigned char)n;
             green = (unsigned char)l;
             blue = (unsigned char)v;
             break;
         case 5:
+            // std::cout << " case5" << std::endl;
+
             red = (unsigned char)v;
             green = (unsigned char)l;
             blue = (unsigned char)m;

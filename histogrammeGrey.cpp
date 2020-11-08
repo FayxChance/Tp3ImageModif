@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 
     // if (argc < 3)
     // {
-    //     std::cerr << "Usage: histogramme <input.ppm> <output.ppm>" << std::endl;
+    //     std::cerr << "Usage: histogrammeGrey <input.ppm> <output.ppm>" << std::endl;
     //     return 0;
     // }
     typedef unsigned char GrayLevel;
@@ -37,7 +37,7 @@ int main(int argc, char const *argv[])
     {
         imgHisto.at((0 + 255 + 4), i) = 0;
     }
-    std::ofstream output("histoDebut.pgm");
+    std::ofstream output(argv[2]);
     bool ok2 = Image2DWriter<GrayLevel>::write(imgHisto, output, false);
     if (!ok2)
     {
@@ -51,12 +51,17 @@ int main(int argc, char const *argv[])
     Histogramme H;
     // fonctionne, car l'itérateur a une valeur de type unsigned char.
     // H.init(img2.begin<ColorValueAccessor>(), img2.end<ColorValueAccessor>());
+    int maxPer = 0;
+    for (int i = 0; i < 256; i++)
+    {
+        maxPer = maxPer < H.h1[i] ? H.h1[i] : maxPer;
+    }
     H.init(img.begin(), img.end()); // fonctionne, car l'itérateur a une valeur de type unsigned char.
     // std::cout << "taille : " << img.end() - img.begin() << std::endl;
     for (int i = 0; i < 256; i++)
     {
         // std::cout << "I : " << i << "    H[i] : " << H.h1[i] << " Nb sur 255 : " << (int)(H.h1[i] * 256) << std::endl;
-        for (int j = 0; j < (int)(H.h1[i] * 256); j++)
+        for (int j = 0; j < (int)(H.h1[i] * 256 / (maxPer + 1)); j++)
         {
             // std::cout << "I : " << i << " J : " << j << "    H[i] : " << H.h1[i] << " Nb sur 255 : " << (int)(H.h1[i] * 256) << std::endl;
             // std::cout << (img2.end<ColorValueAccessor>() - img2.begin<ColorValueAccessor>()) << std::endl;
@@ -65,17 +70,17 @@ int main(int argc, char const *argv[])
     }
     for (int i = 0; i < 256; i++)
     {
-        std::cout << "I : " << i << "    H[i] : " << H.h2[i] << " Nb sur 255 : " << (int)(H.h2[i] * 256) << std::endl;
+        // std::cout << "I : " << i << "    H[i] : " << H.h2[i] << " Nb sur 255 : " << (int)(H.h2[i] * 256) << std::endl;
 
         for (int j = 0; j < (int)(H.h2[i] * 256 / 100); j++)
         {
-            std::cout << "I : " << i << " J : " << j << "    H[i] : " << H.h2[i] << " Nb sur 255 : " << (int)(H.h2[i] * 256) << std::endl;
+            // std::cout << "I : " << i << " J : " << j << "    H[i] : " << H.h2[i] << " Nb sur 255 : " << (int)(H.h2[i] * 256) << std::endl;
 
             imgHisto.at(i + 255 + 4 * 2, 255 - j) = 0;
         }
     }
 
-    std::ofstream output2("histoDebut.pgm");
+    std::ofstream output2(argv[2]);
 
     ok2 = Image2DWriter<GrayLevel>::write(imgHisto, output2, false);
     if (!ok2)

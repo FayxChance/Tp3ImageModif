@@ -55,23 +55,29 @@ int main(int argc, char const *argv[])
     // fonctionne, car l'itérateur a une valeur de type unsigned char.
     H.init(img.begin<ColorValueAccessor>(), img.end<ColorValueAccessor>());
     // std::cout << "taille : " << img.end() - img.begin() << std::endl;
+    int maxPer = 0;
     for (int i = 0; i < 256; i++)
     {
-        // std::cout << "I : " << i << "    H[i] : " << H.h1[i] << " Nb sur 255 : " << (int)(H.h1[i] * 256) << std::endl;
-        for (int j = 0; j < (int)(H.h1[i] * 256); j++)
+        maxPer = maxPer < H.h1[i] ? H.h1[i] : maxPer;
+    }
+
+    for (int i = 0; i < 256; i++)
+    {
+        // std::cout << "I : " << i << "    H[i] : " << H.h1[i] << std::endl;
+        for (int j = 0; j < (int)(H.h1[i] * 256 / (maxPer + 1)); j++)
         {
-            // std::cout << "I : " << i << " J : " << j << "    H[i] : " << H.h1[i] << " Nb sur 255 : " << (int)(H.h1[i] * 256) << std::endl;
+            std::cout << "I : " << i << " J : " << j << " H[i] : " << H.h1[i] << " Nb sur 255 : " << (int)(H.h1[i] * 256) << std::endl;
             // std::cout << (img2.end<ColorValueAccessor>() - img2.begin<ColorValueAccessor>()) << std::endl;
             imgHisto.at(i, 255 - j) = 0;
         }
     }
     for (int i = 0; i < 256; i++)
     {
-        std::cout << "I : " << i << "    H[i] : " << H.h2[i] << " Nb sur 255 : " << (int)(H.h2[i] * 256) << std::endl;
+        // std::cout << "I : " << i << "    H[i] : " << H.h2[i] << " Nb sur 255 : " << (int)(H.h2[i] * 256) << std::endl;
 
         for (int j = 0; j < (int)(H.h2[i] * 256 / 100); j++)
         {
-            std::cout << "I : " << i << " J : " << j << "    H[i] : " << H.h2[i] << " Nb sur 255 : " << (int)(H.h2[i] * 256) << std::endl;
+            // std::cout << "I : " << i << " J : " << j << "    H[i] : " << H.h2[i] << " Nb sur 255 : " << (int)(H.h2[i] * 256) << std::endl;
 
             imgHisto.at(i + 255 + 4 * 2, 255 - j) = 0;
         }
