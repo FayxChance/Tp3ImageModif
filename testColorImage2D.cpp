@@ -9,6 +9,7 @@ int main()
     typedef Image2D<Color> ColorImage2D;
     typedef ColorImage2D::Iterator Iterator;
     typedef ColorImage2D::ConstIterator ConstIterator;
+
     ColorImage2D img(256, 256, Color(0, 0, 0));
     Iterator it = img.begin();
     for (int y = 0; y < 256; ++y)
