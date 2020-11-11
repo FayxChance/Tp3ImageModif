@@ -1,0 +1,13 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{D\351finition d'une classe pour repr\351senter des images arbitraires}{}% 2
+\BOOKMARK [1][-]{section.3}{Introduction des images couleurs}{}% 3
+\BOOKMARK [1][-]{section.4}{Premier it\351rateur sur images quelconques}{}% 4
+\BOOKMARK [1][-]{section.5}{Un importeur / exporteur PBM g\351n\351rique}{}% 5
+\BOOKMARK [1][-]{section.6}{Premier test: on inverse les canaux rouge et bleu}{}% 6
+\BOOKMARK [1][-]{section.7}{On rajoute les accesseurs et un it\351rateur g\351n\351rique}{}% 7
+\BOOKMARK [1][-]{section.8}{It\351rateurs g\351n\351riques non constants}{}% 8
+\BOOKMARK [1][-]{section.9}{Espace TSV \(HSV\) et histogramme d'une image couleur}{}% 9
+\BOOKMARK [1][-]{section.10}{Egalisation d'image couleur}{}% 10
+\BOOKMARK [1][-]{section.11}{Un peu d'imagination}{}% 11
+\BOOKMARK [2][-]{subsection.11.1}{Inversion des couleurs}{section.11}% 12
+\BOOKMARK [2][-]{subsection.11.2}{Sepia}{section.11}% 13

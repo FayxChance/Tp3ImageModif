@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{adjustbox}
+\usepackage{hyperref}
 \graphicspath{ {./images/} }
 %opening
 \title{Compte rendu TP2 : Programmation générique}
@@ -18,7 +19,20 @@
 
   \pagenumbering{arabic}
   \section{Introduction}
-  Pour compiler les sources, il suffit de faire un make. Chaque réponse fera l'affaire d'une section avec la commande correspondante.
+   Pour compiler les sources, il suffit de faire un make. Chaque réponse fera l'affaire d'une section avec la commande correspondante.
+  
+  Les fichiers pour tester sont :
+  \begin{itemize}
+    \item ./patinoire.ppm
+    \item ./patinoire2.ppm
+    \item ./patinoire3.ppm
+    \item ./dessin1.ppm
+    \item ./dessin2.ppm
+    \item ./kowloon.ppm
+    \item ./colors.ppm
+    \item ./lena.pgm
+
+  \end{itemize}
 
 
   \section{Définition d'une classe pour représenter des images arbitraires}
@@ -176,30 +190,66 @@
     \begin{lstlisting}[language=Bash]
       $ ./egaliseur kowloon.ppm    
       $ display kowloon_histoEq.pgm
-      & display kowloon_egalise.pgm
+      $ display kowloon_egalise.pgm
     \end{lstlisting}
 
     \begin{figure}[h]
       \begin{subfigure}{0.5\textwidth}
         \includegraphics[width=1\linewidth, height=4cm]{kowloon}
         \caption{Image originale}
-        \label{fig:kowloonO}
+        \label{fig:kowloonO2}
       \end{subfigure}
       \begin{subfigure}{0.5\textwidth}
         \includegraphics[width=1\linewidth, height=4cm]{kowloon_egalise.jpeg}
         \caption{Image égalisée}
-        \label{fig:kowloonO}
+        \label{fig:kowloonEg}
       \end{subfigure}
       \begin{subfigure}{1\textwidth}
         \centering
         \includegraphics[width=1\linewidth, height=6cm]{kowloon_histoEq.jpeg}   
         \caption{Histogramme des niveaux de couleur égalisée}
-        \label{fig:kowloonHisto}
+        \label{fig:kowloonHistoEg}
       \end{subfigure}
     \end{figure}
 
     \pagebreak
     \section{Un peu d'imagination}
     \subsection{Inversion des couleurs}
-    Petit programme qui permet d'inverser les valeurs des couleurs d'une image.
+    Petit programme qui permet d'inverser les valeurs des couleurs d'une image. Il suffit de faire un \emph{ValeurComposante = 255-ValeurComposante} sur chaque composante.
+    \begin{lstlisting}[language=Bash]
+      $ ./invert-color patinoire.ppm patinoireInvert.ppm       
+      $ display patinoireInvert.ppm 
+    \end{lstlisting}
+    \begin{figure}[h]
+      \begin{subfigure}{0.6\textwidth}
+       \includegraphics[width=1\linewidth, height=5cm]{patinoire3}
+       \caption{Image originale}
+       \label{fig:patinoire}
+       \end{subfigure}
+        \begin{subfigure}{0.6\textwidth}
+       \includegraphics[width=1\linewidth, height=5cm]{patinoire3Invert.jpeg}   
+       \caption{Image avec couleurs inversées}
+       \label{fig:patinoireInvert}
+       \end{subfigure}
+       \end{figure}
+    \subsection{Sepia}
+    Petit programme qui permet d'appliquer un filtre sépia sur une image. Il suffit de multplier chaque composantes par des constantes (cf : \href{https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created}{Stackoverflow})
+    \begin{lstlisting}[language=Bash]
+      $ ./sepia patinoire2.ppm patinoire2Sepia.ppm  
+      $ display patinoire2Sepia.ppm
+    \end{lstlisting}
+    \begin{figure}[h]
+      \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=1\linewidth, height=5cm]{patinoire2}
+        \caption{Image originale}
+        \label{fig:patinoire2}
+      \end{subfigure}
+      \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=1\linewidth, height=5cm]{patinoire2Sepia.jpeg}   
+        \caption{Image avec filtre sepia}
+        \label{fig:patinoireSepia}
+      \end{subfigure}
+    \end{figure}
+    \section*{Conclusion}
+    TP très appréciable à faire, surtout voir le résultat sur des photos persos, mais quelques fois rageant à cause de certaines erreurs très énervantes, notamment la construction de l'histogramme de couleur, où il faut diviser par la valeur max pour éviter un segFault quand on construit le tableau.
 \end{document}
