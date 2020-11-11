@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
     std::string delimiter = ".";
     std::string token = inputArg.substr(0, inputArg.find(delimiter)); // Token = nomfichier sans .pgm
 
-    std::string namehisto = token + ("_histo.pgm");
+    std::string namehisto = token + ("_histoEq.pgm");
     std::string nameEgal = token + ("_egalise.ppm");
 
     typedef unsigned char GrayLevel;

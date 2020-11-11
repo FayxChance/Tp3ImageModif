@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.9)  10 NOV 2020 22:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.9)  11 NOV 2020 17:59
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**compteRendu
-(./compteRendu
+**/home/neptune/Desktop/cpp/TP1/compteRendu.tex
+(/home/neptune/Desktop/cpp/TP1/compteRendu.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-06-03>
-(/usr/share/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2020-06-03> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
@@ -22,14 +22,11 @@ File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-)
-(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
-)
-(/usr/share/texmf-dist/tex/latex/listings/listings.sty
-(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+) (/usr/share/texmf-dist/tex/latex/listings/listings.sty (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
@@ -45,45 +42,35 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \lst@newlines=\count179
 \lst@lineno=\count180
 \lst@maxwidth=\dimen138
-
-(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+ (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count181
 \lst@skipnumbers=\count182
 \lst@framebox=\box46
-)
-(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-
-(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+ (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-
-(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen139
 \Gin@req@width=\dimen140
-)
-(/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
+) (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
-
-(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+ (/usr/share/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/05/10 v3.4j Customizing captions (AR)
-
-(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+ (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/05/10 v1.11 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
 \captionmargin=\dimen141
@@ -101,131 +88,272 @@ Package caption Info: listings package is loaded.
 )
 \c@subfigure=\count185
 \c@subtable=\count186
+) (/usr/share/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
+ (/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+ (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks19
+\XKV@tempa@toks=\toks20
 )
-(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+\XKV@depth=\count187
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/share/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+ (/usr/share/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box47
+)
+\tc@llx=\dimen148
+\tc@lly=\dimen149
+\tc@urx=\dimen150
+\tc@ury=\dimen151
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (/usr/share/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen152
+\adjbox@Height=\dimen153
+\adjbox@Depth=\dimen154
+\adjbox@Totalheight=\dimen155
+\adjbox@pwidth=\dimen156
+\adjbox@pheight=\dimen157
+\adjbox@pdepth=\dimen158
+\adjbox@ptotalheight=\dimen159
+ (/usr/share/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count188
+) (/usr/share/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box48
+\sift@deathcycles=\count189
+\@vwid@loff=\dimen160
+\@vwid@roff=\dimen161
+)) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count187
-\l__pdf_internal_box=\box47
+\l__kernel_color_stack_int=\count190
+\l__pdf_internal_box=\box49
+) (/home/neptune/Desktop/cpp/TP1/compteRendu.aux
+
+LaTeX Warning: Label `fig:kowloonO' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:kowloonO' multiply defined.
+
+
+LaTeX Warning: Label `fig:kowloonO' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:kowloonO' multiply defined.
+
+
+LaTeX Warning: Label `fig:kowloonHisto' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:kowloonHisto' multiply defined.
+
 )
-(./compteRendu.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-\c@lstlisting=\count188
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+\c@lstlisting=\count191
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count189
-\scratchdimen=\dimen148
-\scratchbox=\box48
-\nofMPsegments=\count190
-\nofMParguments=\count191
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count192
-\MPscratchDim=\dimen149
-\MPnumerator=\count193
-\makeMPintoPDFobject=\count194
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count192
+\scratchdimen=\dimen162
+\scratchbox=\box50
+\nofMPsegments=\count193
+\nofMParguments=\count194
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count195
+\MPscratchDim=\dimen163
+\MPnumerator=\count196
+\makeMPintoPDFobject=\count197
+\everyMPtoPDFconversion=\toks22
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 14.
+(Font)              <12> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 14.
+(Font)              <8> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 14.
+(Font)              <6> on input line 15.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-Overfull \hbox (2.19386pt too wide) in paragraph at lines 37--38
-\OT1/cmr/m/n/10 Utilisation de la classe g^^Sen^^Serique Im-age2D pour repr^^Se
-senter une im-age en couleur. 
+Overfull \hbox (2.19386pt too wide) in paragraph at lines 38--39
+\OT1/cmr/m/n/10 Utilisation de la classe g^^Sen^^Serique Im-age2D pour repr^^Sesenter une im-age en couleur. 
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-0.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 41.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
  [1]
-Overfull \hbox (2.19386pt too wide) in paragraph at lines 46--47
-\OT1/cmr/m/n/10 Utilisation de la classe g^^Sen^^Serique Im-age2D pour repr^^Se
-senter une im-age en couleur,
+Overfull \hbox (2.19386pt too wide) in paragraph at lines 47--48
+\OT1/cmr/m/n/10 Utilisation de la classe g^^Sen^^Serique Im-age2D pour repr^^Sesenter une im-age en couleur, 
  []
 
 <./images/colors.jpeg, id=15, 256.96pt x 256.96pt>
 File: ./images/colors.jpeg Graphic file (type jpg)
 <use ./images/colors.jpeg>
-Package pdftex.def Info: ./images/colors.jpeg  used on input line 57.
+Package pdftex.def Info: ./images/colors.jpeg  used on input line 58.
 (pdftex.def)             Requested size: 192.71951pt x 192.71951pt.
-[2 <./images/colors.jpeg>]
+[2 </home/neptune/Desktop/cpp/TP1/./images/colors.jpeg>]
 <./images/patinoire.jpeg, id=20, 4015.0pt x 2258.4375pt>
 File: ./images/patinoire.jpeg Graphic file (type jpg)
 <use ./images/patinoire.jpeg>
-Package pdftex.def Info: ./images/patinoire.jpeg  used on input line 68.
-(pdftex.def)             Requested size: 206.94942pt x 142.25475pt.
+Package pdftex.def Info: ./images/patinoire.jpeg  used on input line 69.
+(pdftex.def)             Requested size: 206.94942pt x 113.79001pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 69.
+(Font)              <7> on input line 70.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 69.
+(Font)              <5> on input line 70.
 <./images/patinoire-inv.jpeg, id=21, 4015.0pt x 2258.4375pt>
 File: ./images/patinoire-inv.jpeg Graphic file (type jpg)
 <use ./images/patinoire-inv.jpeg>
-Package pdftex.def Info: ./images/patinoire-inv.jpeg  used on input line 71.
-(pdftex.def)             Requested size: 206.94942pt x 142.25475pt.
+Package pdftex.def Info: ./images/patinoire-inv.jpeg  used on input line 72.
+(pdftex.def)             Requested size: 206.94942pt x 113.79001pt.
 
-Overfull \hbox (71.22643pt too wide) in paragraph at lines 67--73
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 68--74
 []$[]$ $[]$ 
  []
 
-[3 <./images/patinoire.jpeg> <./images/patinoire-inv.jpeg>] (./compteRendu.aux)
+[3 </home/neptune/Desktop/cpp/TP1/./images/patinoire.jpeg> </home/neptune/Desktop/cpp/TP1/./images/patinoire-inv.jpeg>]
+Overfull \hbox (28.55138pt too wide) in paragraph at lines 76--76
+[]\OT1/cmr/bx/n/14.4 On ra-joute les ac-cesseurs et un it^^Serateur g^^Sen^^Serique 
+ []
+
+File: ./images/patinoire.jpeg Graphic file (type jpg)
+<use ./images/patinoire.jpeg>
+Package pdftex.def Info: ./images/patinoire.jpeg  used on input line 86.
+(pdftex.def)             Requested size: 206.94942pt x 113.79001pt.
+<./images/patinoire_red.jpeg, id=25, 4015.0pt x 2258.4375pt>
+File: ./images/patinoire_red.jpeg Graphic file (type jpg)
+<use ./images/patinoire_red.jpeg>
+Package pdftex.def Info: ./images/patinoire_red.jpeg  used on input line 91.
+(pdftex.def)             Requested size: 206.94942pt x 113.79001pt.
+<./images/patinoire_green.jpeg, id=26, 4015.0pt x 2258.4375pt>
+File: ./images/patinoire_green.jpeg Graphic file (type jpg)
+<use ./images/patinoire_green.jpeg>
+Package pdftex.def Info: ./images/patinoire_green.jpeg  used on input line 96.
+(pdftex.def)             Requested size: 206.94942pt x 113.79001pt.
+<./images/patinoire_blue.jpeg, id=27, 4015.0pt x 2258.4375pt>
+File: ./images/patinoire_blue.jpeg Graphic file (type jpg)
+<use ./images/patinoire_blue.jpeg>
+Package pdftex.def Info: ./images/patinoire_blue.jpeg  used on input line 101.
+(pdftex.def)             Requested size: 206.94942pt x 113.79001pt.
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 85--105
+[]$[]$ $[]$
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 85--105
+[]$ $[]$ 
+ []
+
+[4 </home/neptune/Desktop/cpp/TP1/./images/patinoire_red.jpeg> </home/neptune/Desktop/cpp/TP1/./images/patinoire_green.jpeg> </home/neptune/Desktop/cpp/TP1/./images/patinoire_blue.jpeg>]
+<./images/dessin1.jpeg, id=32, 642.4pt x 1140.26pt>
+File: ./images/dessin1.jpeg Graphic file (type jpg)
+<use ./images/dessin1.jpeg>
+Package pdftex.def Info: ./images/dessin1.jpeg  used on input line 115.
+(pdftex.def)             Requested size: 207.00333pt x 199.16571pt.
+<./images/dessin1_catho.jpeg, id=33, 642.4pt x 1140.26pt>
+File: ./images/dessin1_catho.jpeg Graphic file (type jpg)
+<use ./images/dessin1_catho.jpeg>
+Package pdftex.def Info: ./images/dessin1_catho.jpeg  used on input line 120.
+(pdftex.def)             Requested size: 207.00333pt x 199.16571pt.
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 114--124
+[]$[]$ $[]$ 
+ []
+
+[5 </home/neptune/Desktop/cpp/TP1/./images/dessin1.jpeg> </home/neptune/Desktop/cpp/TP1/./images/dessin1_catho.jpeg>]
+<./images/lena.jpeg, id=37, 256.96pt x 256.96pt>
+File: ./images/lena.jpeg Graphic file (type jpg)
+<use ./images/lena.jpeg>
+Package pdftex.def Info: ./images/lena.jpeg  used on input line 138.
+(pdftex.def)             Requested size: 207.00331pt x 170.7194pt.
+<./images/lenaHisto.jpeg, id=38, 519.9425pt x 256.96pt>
+File: ./images/lenaHisto.jpeg Graphic file (type jpg)
+<use ./images/lenaHisto.jpeg>
+Package pdftex.def Info: ./images/lenaHisto.jpeg  used on input line 144.
+(pdftex.def)             Requested size: 344.99579pt x 170.7194pt.
+ [6 </home/neptune/Desktop/cpp/TP1/./images/lena.jpeg> </home/neptune/Desktop/cpp/TP1/./images/lenaHisto.jpeg>]
+<./images/kowloon.jpeg, id=43, 1003.75pt x 657.45625pt>
+File: ./images/kowloon.jpeg Graphic file (type jpg)
+<use ./images/kowloon.jpeg>
+Package pdftex.def Info: ./images/kowloon.jpeg  used on input line 161.
+(pdftex.def)             Requested size: 275.99382pt x 170.71388pt.
+<./images/kowloonHisto.jpeg, id=44, 519.9425pt x 256.96pt>
+File: ./images/kowloonHisto.jpeg Graphic file (type jpg)
+<use ./images/kowloonHisto.jpeg>
+Package pdftex.def Info: ./images/kowloonHisto.jpeg  used on input line 167.
+(pdftex.def)             Requested size: 344.99579pt x 170.7194pt.
+ [7 </home/neptune/Desktop/cpp/TP1/./images/kowloon.jpeg> </home/neptune/Desktop/cpp/TP1/./images/kowloonHisto.jpeg>]
+File: ./images/kowloon.jpeg Graphic file (type jpg)
+<use ./images/kowloon.jpeg>
+Package pdftex.def Info: ./images/kowloon.jpeg  used on input line 184.
+(pdftex.def)             Requested size: 172.48848pt x 113.80257pt.
+<./images/kowloon_egalise.jpeg, id=48, 1003.75pt x 657.45625pt>
+File: ./images/kowloon_egalise.jpeg Graphic file (type jpg)
+<use ./images/kowloon_egalise.jpeg>
+Package pdftex.def Info: ./images/kowloon_egalise.jpeg  used on input line 189.
+(pdftex.def)             Requested size: 172.48848pt x 113.80257pt.
+<./images/kowloon_histoEq.jpeg, id=49, 519.9425pt x 256.96pt>
+File: ./images/kowloon_histoEq.jpeg Graphic file (type jpg)
+<use ./images/kowloon_histoEq.jpeg>
+Package pdftex.def Info: ./images/kowloon_histoEq.jpeg  used on input line 195.
+(pdftex.def)             Requested size: 344.99579pt x 170.7194pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 183--199
+[]$[]$ $[]$
+ []
+
+[8 </home/neptune/Desktop/cpp/TP1/./images/kowloon_egalise.jpeg> </home/neptune/Desktop/cpp/TP1/./images/kowloon_histoEq.jpeg>] [9] (/home/neptune/Desktop/cpp/TP1/compteRendu.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 4177 strings out of 480478
- 62819 string characters out of 5905959
- 483176 words of memory out of 5000000
- 20201 multiletter control sequences out of 15000+600000
- 536659 words of font info for 38 fonts, out of 8000000 for 9000
+ 5352 strings out of 480478
+ 82920 string characters out of 5905959
+ 502328 words of memory out of 5000000
+ 21338 multiletter control sequences out of 15000+600000
+ 537265 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,7n,51p,295b,1264s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-di
-st/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on compteRendu.pdf (4 pages, 3728227 bytes).
+ 47i,7n,99p,444b,1318s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on /home/neptune/Desktop/cpp/TP1/compteRendu.pdf (10 pages, 8899098 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

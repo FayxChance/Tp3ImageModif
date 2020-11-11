@@ -66,7 +66,7 @@ int main(int argc, char const *argv[])
         // std::cout << "I : " << i << "    H[i] : " << H.h1[i] << std::endl;
         for (int j = 0; j < (int)(H.h1[i] * 256 / (maxPer + 1)); j++)
         {
-            std::cout << "I : " << i << " J : " << j << " H[i] : " << H.h1[i] << " Nb sur 255 : " << (int)(H.h1[i] * 256) << std::endl;
+            // std::cout << "I : " << i << " J : " << j << " H[i] : " << H.h1[i] << " Nb sur 255 : " << (int)(H.h1[i] * 256) << std::endl;
             // std::cout << (img2.end<ColorValueAccessor>() - img2.begin<ColorValueAccessor>()) << std::endl;
             imgHisto.at(i, 255 - j) = 0;
         }
