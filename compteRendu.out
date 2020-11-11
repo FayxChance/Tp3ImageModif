@@ -4,7 +4,7 @@
 \BOOKMARK [1][-]{section.4}{Premier it\351rateur sur images quelconques}{}% 4
 \BOOKMARK [1][-]{section.5}{Un importeur / exporteur PBM g\351n\351rique}{}% 5
 \BOOKMARK [1][-]{section.6}{Premier test: on inverse les canaux rouge et bleu}{}% 6
-\BOOKMARK [1][-]{section.7}{On rajoute les accesseurs et un it\351rateur g\351n\351rique}{}% 7
+\BOOKMARK [1][-]{section.7}{On rajoute les accesseurs et un it\351rateur g\351n\351rique et accesseur}{}% 7
 \BOOKMARK [1][-]{section.8}{It\351rateurs g\351n\351riques non constants}{}% 8
 \BOOKMARK [1][-]{section.9}{Espace TSV \(HSV\) et histogramme d'une image couleur}{}% 9
 \BOOKMARK [1][-]{section.10}{Egalisation d'image couleur}{}% 10

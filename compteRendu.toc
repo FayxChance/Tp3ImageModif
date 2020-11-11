@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Définition d'une classe pour représenter des images arbitraires}{1}{section.2}%
+\contentsline {section}{\numberline {3}Introduction des images couleurs}{1}{section.3}%
+\contentsline {section}{\numberline {4}Premier itérateur sur images quelconques}{2}{section.4}%
+\contentsline {section}{\numberline {5}Un importeur / exporteur PBM générique}{2}{section.5}%
+\contentsline {section}{\numberline {6}Premier test: on inverse les canaux rouge et bleu}{3}{section.6}%
+\contentsline {section}{\numberline {7}On rajoute les accesseurs et un itérateur générique et accesseur}{4}{section.7}%
+\contentsline {section}{\numberline {8}Itérateurs génériques non constants}{5}{section.8}%
+\contentsline {section}{\numberline {9}Espace TSV (HSV) et histogramme d'une image couleur}{6}{section.9}%
+\contentsline {section}{\numberline {10}Egalisation d'image couleur}{8}{section.10}%
+\contentsline {section}{\numberline {11}Un peu d'imagination}{9}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Inversion des couleurs}{9}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Sepia}{9}{subsection.11.2}%

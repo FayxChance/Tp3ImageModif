@@ -1,6 +1,5 @@
-Les 9 premieres questions ont été traités, et la question 10 a été commencé
-Le lien du git :
-
-https://github.com/FayxChance/Tp3ImageModif.git
-
-Le readme sera un peu plus étoffé une fois le tp fini
+Toutes les questions ont été traitées.
+Il suffit de faire une make pour tout compiler.
+Les commandes dispos sont dans le compte rendu.
+Si vous ne savez pas utiliser une commande,
+entrer la sans argument, une aide va s'afficher

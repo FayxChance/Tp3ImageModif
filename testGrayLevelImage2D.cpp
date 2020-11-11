@@ -57,8 +57,13 @@
 
 using namespace std;
 
-int main(int argc, char **argv)
+int main(int argc, char const *argv[])
 {
+  if (argc < 1)
+  {
+    std::cerr << "Usage: testGrayLevelImage2D" << std::endl;
+    return 0;
+  }
   typedef unsigned char GrayLevel;
   typedef Image2D<GrayLevel> GrayLevelImage2D;
   GrayLevelImage2D img(8, 8, 5); // imagette 8x8 remplie de 5

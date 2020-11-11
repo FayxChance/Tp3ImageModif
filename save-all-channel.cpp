@@ -9,6 +9,11 @@
 
 int main(int argc, char **argv)
 {
+    if (argc < 2)
+    {
+        std::cerr << "Usage: save-all-channel <input.ppm>" << std::endl;
+        return 0;
+    }
     typedef Image2D<Color> ColorImage2D;
     typedef Image2DReader<Color> ColorImage2DReader;
     typedef ColorImage2D::Iterator ColorIterator;

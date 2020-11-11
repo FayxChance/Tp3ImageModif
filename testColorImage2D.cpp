@@ -4,8 +4,13 @@
 #include "Color.hpp"
 #include "Image2DWriter.hpp"
 #include "Image2DReader.hpp"
-int main()
+int main(int argc, char const *argv[])
 {
+    if (argc < 1)
+    {
+        std::cerr << "Usage: testColorImage2D" << std::endl;
+        return 0;
+    }
     typedef Image2D<Color> ColorImage2D;
     typedef ColorImage2D::Iterator Iterator;
     typedef ColorImage2D::ConstIterator ConstIterator;

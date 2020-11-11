@@ -7,6 +7,11 @@
 
 int main(int argc, char const *argv[])
 {
+    if (argc < 3)
+    {
+        std::cerr << "Usage: sepia <input.ppm> <output.ppm>" << std::endl;
+        return 0;
+    }
     typedef Image2D<Color> ColorImage2D;
     typedef ColorImage2D::Iterator Iterator;
     typedef ColorImage2D::ConstIterator ConstIterator;

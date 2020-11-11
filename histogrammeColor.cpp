@@ -8,11 +8,11 @@
 int main(int argc, char const *argv[])
 {
 
-    // if (argc < 3)
-    // {
-    //     std::cerr << "Usage: histogramme <input.ppm> <output.ppm>" << std::endl;
-    //     return 0;
-    // }
+    if (argc < 2)
+    {
+        std::cerr << "Usage: histogrammeColor <input.ppm> <output.ppm>" << std::endl;
+        return 0;
+    }
     typedef unsigned char GrayLevel;
     typedef Image2D<unsigned char> GrayLevelImage2D;
     typedef Image2DWriter<unsigned char> GrayLevelImage2DWriter;

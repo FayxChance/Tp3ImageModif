@@ -5,6 +5,7 @@
 \usepackage{subcaption}
 \usepackage{adjustbox}
 \usepackage{hyperref}
+\usepackage{imakeidx}
 \graphicspath{ {./images/} }
 %opening
 \title{Compte rendu TP2 : Programmation générique}
@@ -16,7 +17,8 @@
 \maketitle
 \pagenumbering{gobble}
 \newpage
-
+\tableofcontents
+\newpage
   \pagenumbering{arabic}
   \section{Introduction}
    Pour compiler les sources, il suffit de faire un make. Chaque réponse fera l'affaire d'une section avec la commande correspondante.
@@ -36,6 +38,8 @@
 
 
   \section{Définition d'une classe pour représenter des images arbitraires}
+  Fichier concerné : \emph{Image2D.hpp, GrayLevelImage2D.hpp}
+
   Utilisation de la classe générique Image2D pour représenter une image en niveau de gris :
   \begin{lstlisting}[language=Bash]
   $ ./testGrayLevelImage2D  
@@ -49,6 +53,8 @@
     5 5 5 5 5 5 5 5
   \end{lstlisting}
   \section{Introduction des images couleurs}
+  Fichier concerné : \emph{Color.hpp, testColorImage2DBash.cpp}
+
   Utilisation de la classe générique Image2D pour représenter une image en couleur.
   \begin{lstlisting}[language=Bash]
   $ ./testColorImage2DBash
@@ -58,11 +64,15 @@
   \end{lstlisting}
     \pagebreak
     \section{Premier itérateur sur images quelconques}
-     Utilisation de la classe générique Image2D pour représenter une image en couleur,
+    Fichier concerné : \emph{Color.hpp, testColorImage2D.cpp}
+
+     Utilisation de la classe générique Image2D pour représenter une image en couleur, et la parcourir avec des itérateurs
   \begin{lstlisting}[language=Bash]
   $ ./testColorImage2D
   \end{lstlisting}
     \section{Un importeur / exporteur PBM générique}
+    Fichier concerné : \emph{Color.hpp, Image2DWriter.hpp, Image2DReader.hpp}
+
     On va écrire une classe pour écrire et lire un fichier, en spécialisant pour la couleur et les nuances de gris. On va réutiliser la fonction permettant de créer l'image et l'écrire dans le fichier  \emph{colors.ppm}
     \begin{lstlisting}[language=Bash]
   $ ./testColorImage2D
@@ -73,6 +83,8 @@
     \end{center}
     \pagebreak
     \section{Premier test: on inverse les canaux rouge et bleu}
+    Fichier concerné : \emph{invert-blue-red.cpp}
+
     Grâce à nos fonctions de lecture et écriture, on peut commencer à traiter les images. On va lire une image et écrire une nouvelle en changeant la couleur de chaque pixel en inversant le bleu et le rouge. Il faut donner une image en entrée et une image en sortie.
     \begin{lstlisting}[language=Bash]
   $ ./invert-blue-red patinoire.ppm patinoire-inv.ppm
@@ -87,7 +99,9 @@
     \end{subfigure}
     \end{figure}
     \pagebreak
-    \section{On rajoute les accesseurs et un itérateur générique}
+    \section{On rajoute les accesseurs et un itérateur générique et accesseur}
+    Fichier concerné : \emph{Accessor.hpp, Image2D.hpp, save-all-channel.cpp}
+
     On va définir des itérateurs sélectifs qui ne voient qu'une composante de la couleur (en lecture et en écriture). Plutôt que de les réécrire à chaque fois, on définit la notion d'accesseur, puis nos nouveaux itérateurs seront paramétrés par un accesseur. Grâce à nos nouveaux accesseur, on va pouvoir sauvegarder les 3 channels de couleurs sous forme de niveau de gris.
     \begin{lstlisting}[language=Bash]
   $ ./save-all-channel patinoire.ppm
@@ -119,6 +133,8 @@
     \end{figure}
     \pagebreak
     \section{Itérateurs génériques non constants}
+    Fichier concerné : \emph{Image2D.hpp, cathodique.cpp}
+
     Nous avons fait l'itérateur générique en lecture. Maintenant l'itérateur générique en lecture/écriture (i.e. non const).
      \begin{lstlisting}[language=Bash]
   $ ./save-all-channel dessin1.ppm dessin1_catho.ppm
@@ -138,6 +154,8 @@
     \end{figure}
     \pagebreak
     \section{Espace TSV (HSV) et histogramme d'une image couleur}
+    Fichier concerné : \emph{Color.hpp, histogrammeGrey.cpp, histogrammeColor.cpp}
+
     Ici deux programmes, un pour faire des histogrammes sur les images en gris et l'autre pour faire des histogrammes sur les images couleurs.
     \begin{quote}
     D'abord celui en gris
@@ -186,6 +204,8 @@
 
     \pagebreak
     \section{Egalisation d'image couleur}
+    Fichier concerné : \emph{egaliseur-couleur.cpp}
+
     Dès que l'on a un histogramme cumulé d'une image, il est maintenant facile d'égaliser l'image pour la rendre bien balancé. On utilisera cette fonction d'égalisation mais sur les valeurs des couleurs, via nos itérateurs génériques avec accesseur ColorValueAccessor. 
     \begin{lstlisting}[language=Bash]
       $ ./egaliseur kowloon.ppm    
@@ -215,6 +235,8 @@
     \pagebreak
     \section{Un peu d'imagination}
     \subsection{Inversion des couleurs}
+    Fichier concerné : \emph{invert-color.cpp}
+
     Petit programme qui permet d'inverser les valeurs des couleurs d'une image. Il suffit de faire un \emph{ValeurComposante = 255-ValeurComposante} sur chaque composante.
     \begin{lstlisting}[language=Bash]
       $ ./invert-color patinoire.ppm patinoireInvert.ppm       
@@ -233,6 +255,8 @@
        \end{subfigure}
        \end{figure}
     \subsection{Sepia}
+    Fichier concerné : \emph{sepia.cpp}
+
     Petit programme qui permet d'appliquer un filtre sépia sur une image. Il suffit de multplier chaque composantes par des constantes (cf : \href{https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created}{Stackoverflow})
     \begin{lstlisting}[language=Bash]
       $ ./sepia patinoire2.ppm patinoire2Sepia.ppm  
@@ -251,5 +275,5 @@
       \end{subfigure}
     \end{figure}
     \section*{Conclusion}
-    TP très appréciable à faire, surtout voir le résultat sur des photos persos, mais quelques fois rageant à cause de certaines erreurs très énervantes, notamment la construction de l'histogramme de couleur, où il faut diviser par la valeur max pour éviter un segFault quand on construit le tableau.
+    TP très appréciable à faire, surtout voir le résultat sur des photos persos, mais quelques fois rageant à cause de certaines erreurs très énervantes, notamment la construction de l'histogramme de couleur, où il faut diviser par la valeur max pour éviter un segFault quand on construit le graphique.
 \end{document}
